@@ -1,0 +1,849 @@
+/*************
+ * 页面样式
+ *************/
+
+/* ===========
+   基本默认值
+   =========== */
+
+html {
+    font-size:312.5%;
+    color: #222;
+    font-family: "宋体", serif;
+}
+
+/*选择文字的背景颜色,没有阴影*/
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+
+ul, ol, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+/* ===========
+   工具样式
+   =========== */
+
+/*在父元素中居中显示*/
+.conter-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*文本对齐和浮动*/
+.pull-right {
+    float: right !important;
+}
+.pull-left {
+    float: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center !important;
+}
+/*块隐藏*/
+.hide {
+    display: none !important;
+}
+/*块显示*/
+.show {
+    display: block !important;
+}
+
+/*隐藏 并且占据原来的空间*/
+.invisible {
+    visibility: hidden;
+}
+/*隐藏文本*/
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+
+/* ===========
+   浏览器更新提示
+   =========== */
+.prompt {
+    margin: 0;
+    padding: 0.2rem;
+    background-color: #ccc;
+}
+
+/* ===========
+   自定义页面样式
+   =========== */
+body {
+    font-size: 0.24rem;
+    line-height: 0.3rem;
+    background-color: #f7f7f7;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: #0ae;
+    text-decoration: underline;
+}
+
+/*网站头部-------------------------------------------*/
+header {
+    width: 100%;
+}
+/*topBar***********************************/
+header .top {
+    line-height: 0.6rem;
+    padding: 0 0.3rem;
+    color: #fff;
+    background-color: #555;
+    border-bottom: 1px solid #ecc000;
+}
+header .top .tel {
+    float: left;
+}
+
+header .top ul {
+    text-align: right;
+    font-size: 0;
+}
+header .top ul li {
+    display: inline-block;
+}
+header .top ul li + li{
+    border-left: 1px solid #999;
+}
+header .top ul li a{
+    font-size: 0.24rem;
+    color: #fff;
+    display: inline-block;
+    padding: 0 0.3rem;
+}
+
+@media only screen and (max-width: 50.0625em){
+
+}
+
+/*平板*/
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
+    header .top ul li a{
+        padding: 0 0.2rem;
+    }
+    header .top .tel {
+        display: none;
+    }
+}
+/*手机*/
+@media only screen and (max-width: 30em){
+    header .top {
+        line-height: 0.4rem;
+    }
+    header .top ul li a{
+        padding: 0 0.08rem;
+    }
+    header .top .tel,
+    header .top ul li:nth-child(3),
+    header .top ul li:nth-child(4) {
+        display: none;
+    }
+}
+
+
+
+/*headerNav*********************************/
+header .main .brand {
+    float: left;
+    padding: 0.15rem 0.28rem;
+}
+header .main ul {
+    float: right;
+}
+header .main ul li {
+    display: inline-block;
+    border-left: 1px solid #f0ede9;
+}
+header .main ul li a{
+    display: inline-block;
+    padding: 0 0.56rem;
+    line-height: 1.1rem;
+    font-size: 0.32rem;
+    font-weight: bold;
+    color: #7c7a65;
+    text-decoration: none;
+}
+header .main ul li a:hover,
+header .main ul li a:active,
+header .main ul li a.active {
+    color: #ffb300;
+    background-color: #f8f6f1;
+}
+/*平板*/
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
+    header .main .brand {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        text-align: center;
+    }
+    header .main ul {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    header .main ul li a{
+        padding: 0 0.28rem;
+    }
+}
+/*手机*/
+@media only screen and (max-width: 30em){
+    header .main .brand {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.06rem 0;
+    }
+    header .main .brand img{
+        height: 0.48rem;
+    }
+    header .main ul {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    header .main ul li a{
+        padding: 0 0.2rem;
+        font-size: 0.2rem;
+        line-height: 0.68rem;
+    }
+    header .main ul li:first-child{
+        display: none;
+    }
+}
+
+
+/*网站主要内容-------------------------------------------------------*/
+.container {
+    width: 100%;
+}
+/*交易信息*************************************************/
+.transaction {
+    width: 100%;
+    background-color: #7c7365;
+}
+.trans-content {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 0.3rem;
+}
+
+.trans-data {
+    float: left;
+    padding: 0.2rem 0.16rem;
+    text-align: left;
+}
+.trans-data + .trans-data{
+    margin-left: 0.4rem;
+}
+
+.trans-data span {
+    display: inline-block;
+    line-height: 0.6rem;
+    color: #fff;
+}
+.trans-data span.trans-money {
+    font-size: 0.4rem;
+    color: #ff9900;
+    letter-spacing: 2px;
+    margin: 0 0.16rem;
+    padding: 0 0.2rem;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 1px 2px 1px #666 inset;
+}
+.trans-report {
+    padding: 0.2rem 0.16rem;
+    text-align: left;
+    float: right;
+}
+.trans-report  a{
+    color: #fff;
+    line-height: 0.6rem;
+    display: block;
+}
+/*平板*/
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
+    .trans-content .trans-data {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        padding: 0.08rem 0;
+    }
+    .trans-data span {
+        display: inline-block;
+        line-height: 0.44rem;
+        color: #fff;
+    }
+    .trans-report {
+        display: none;
+    }
+}
+/*手机*/
+@media only screen and (max-width: 30em){
+    .trans-content .trans-data {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        padding: 0;
+    }
+    .trans-data span {
+        display: inline-block;
+        line-height: 0.44rem;
+        color: #fff;
+        font-size: 0.22rem;
+    }
+    .trans-data span.trans-money {
+        font-size: 0.32rem;
+    }
+
+    .trans-report {
+        display: none;
+    }
+}
+
+
+
+
+/*滚动广告****************************************/
+.ad {
+    display: none;
+}
+
+/*平台特点*****************************************/
+.feature {
+    width: 90%;
+    margin: 0.4rem auto;
+    font-size: 0;
+}
+.feature .item {
+    display: inline-block;
+    width: calc(33.33333333333% - 0.6rem);
+    padding: 0.2rem;
+    font-size: 0.28rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+}
+
+.feature .item + .item {
+    margin-left: 0.3rem;
+}
+.feature .item h3 {
+    width: 30%;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    color: #ffb300;
+    font-size: 0.56rem;
+    line-height: 1.4rem;
+    font-family: "微软雅黑", serif;
+    padding: 0 5%;
+    text-align: center;
+}
+.feature .item p {
+    width: 56%;
+    display: inline-block;
+    margin: 0;
+    color: #777;
+    line-height: 0.6rem;
+    font-size: 0.28rem;
+    font-family: "微软雅黑", serif;
+}
+/*平板*/
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
+    .feature .item h3 {
+        width: 90%;
+        text-align: center;
+        font-size: 0.48rem;
+    }
+    .feature .item p {
+        width: 100%;
+        text-align: center;
+        font-size: 0.28rem;
+    }
+}
+/*手机*/
+@media only screen and (max-width: 30em){
+    .feature {
+        margin: 0.2rem auto;
+    }
+    .feature .item h3 {
+        font-size: 0.48rem;
+        line-height: 1rem;
+    }
+    .feature .item p {
+        font-size: 0.28rem;
+        line-height: 0.4rem;
+    }
+    .feature .item {
+        display: block;
+        width: calc(90% + 0.3rem);
+        font-size: 0.28rem;
+        background-color: #fff;
+        box-shadow: 0 0 4px #ccc;
+        margin: 0 auto;
+    }
+    .feature .item + .item {
+        margin: 0.2rem auto;
+    }
+}
+
+
+
+
+/*公告***************************************************/
+.notice {
+    width: 90%;
+    margin: 0.4rem auto;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+    line-height: 0.6rem;
+}
+.notice a{
+    display: inline-block;
+    font-size: 0.24rem;
+    width: 60%;
+    text-decoration: none;
+    margin-left: 0.4rem;
+}
+.notice a:first-child{
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.24rem;
+}
+.notice a:first-child:before{
+    content: "最新公告:\00a0\00a0";
+    color: #F02B2B;
+    font-size: 0.24rem;
+}
+.notice a span {
+    color: #999;
+    margin-right: 0.2rem;
+    font-size: 0.24rem;
+}
+.notice .more {
+    width: 20%;
+    float: right;
+    text-align: right;
+    padding-right: 0.4rem;
+    color: #ffb300;
+}
+/*平板*/
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
+    .notice a span {
+       display: none;
+    }
+}
+/*手机*/
+@media only screen and (max-width: 30em){
+    .notice a{
+        width: 70%;
+        margin-left: 0;
+    }
+    .notice a:first-child:before{
+        content: "最新公告:\00a0";
+        margin-left: 0.4rem;
+    }
+    .notice a span {
+        display: none;
+    }
+}
+
+
+/*产品列表***********************************************/
+.product {
+    width: 90%;
+    margin: 0 auto 0.2rem auto;
+    border-top: solid 2px #ffb300;
+    font-family: "微软雅黑", serif;
+    box-sizing: border-box;
+}
+.product h2,.product-content .item h3, .info,.info p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.product .product-content .item h3, .info, .info p,.item .buy {
+    display: inline-block;
+    font-size: 0;
+}
+
+.product h2 {
+    box-sizing: border-box;
+    padding-top: 2rem;
+    float: left;
+    width: 20%;
+    line-height: 1rem;
+    background-color: #e6f0f9;
+    font-size: 0.52rem;
+    height: calc(1.56rem *5 + 0.02rem *5);
+}
+.product h2 em {
+    display: block;
+    font-size: 0.36rem;
+}
+.product-content {
+    width: 80%;
+    float: right;
+    background-color: #fff;
+}
+.product .product-content .item + .item{
+    border-top: 1px solid #ffb300;
+}
+.product .product-content .item h3 {
+    width: 25%;
+    height: 1.56rem;
+    float: left;
+    line-height: 1.4rem;
+    font-size: 0.24rem;
+    box-sizing: border-box;
+    position: relative;
+    color: #333;
+}
+.product .product-content .item h3 > p {
+    width: 100%;
+    font-size: 0.24rem;
+    line-height: 0.4rem;
+    color: #888;
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    margin: 0 0 0 -50%;
+}
+.product-content .item em {
+    font-style: normal;
+    color: #666;
+    font-size: 0.64rem;
+    font-weight: 400;
+}
+.product-content .item .info {
+    width: 60%;
+    float: left;
+    height: 1.56rem;
+}
+.product-content .item .info p {
+    height: 100%;
+    display: inline-block;
+    font-size: 0.28rem;
+    line-height: 0.78rem;
+}
+.product-content .item .info p + p {
+    padding-left: 30%;
+}
+.product-content .item .info p span{
+    display: block;
+    color:#ffb300;
+    font-size: 0.5rem;
+    line-height: 0.4rem;
+}
+.product-content .item .info p i{
+    color: #666;
+    font-size: 0.2rem;
+    font-style: normal;
+}
+.product-content .item .buy {
+    width: 15%;
+    height: 1.56rem;
+    line-height: 0.78rem;
+}
+.product-content .item .buy  a{
+    height: 50%;
+    width: 80%;
+    text-align: center;
+    display: block;
+    font-size: 0.36rem;
+    background-color: #ffb300;
+    text-decoration: none;
+    color: #fff;
+    margin: 0.39rem auto 0 auto;
+}
+/*禁止购买*/
+.products .product-content .item:last-child a,
+.products .product-content .item:nth-child(4) a {
+    background-color: #999;
+    cursor: default;
+}
+
+/*平板*/
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
+    .product h2 {
+        float: none;
+        display: block;
+        width: 100%;
+        height: auto;
+        font-size: 0.48rem;
+        padding: 0;
+    }
+    .product h2 em{
+        display: none;
+    }
+    .product-content {
+        width: 100%;
+    }
+    .product .product-content .item h3 {
+        font-size: 0.2rem;
+    }
+    .product-content .item em {
+        font-size: 0.56rem;
+    }
+
+    .product-content .item .info p + p {
+        padding-left: 14%;
+    }
+    .product-content .item .info p{
+        font-size: 0.24rem;
+    }
+    .product-content .item .info p span{
+        font-size: 0.52rem;
+    }
+    .product-content .item .buy  a{
+        font-size: 0.28rem;
+    }
+
+}
+/*手机*/
+@media only screen and (max-width: 30em){
+    .product h2 {
+        float: none;
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0 25%;
+        font-size: 0.36rem;
+        line-height: 0.6rem;
+    }
+    .product h2 em{
+        display: none;
+    }
+    .product-content {
+        width: 100%;
+    }
+    .product-content .item .info{
+        width: 70%;
+    }
+    .product .product-content .item h3 {
+        font-size: 0.2rem;
+        height: 1rem;
+        line-height: 0.8rem;
+    }
+
+    .product .product-content .item h3 > p {
+        bottom: 0;
+    }
+    .product-content .item em {
+        font-size: 0.4rem;
+    }
+    .product-content .item .info{
+        height: 1rem;
+        line-height: 1rem;
+    }
+    .product-content .item .info p + p {
+        padding-left: 6%;
+    }
+    .product-content .item .info p{
+        font-size: 0.2rem;
+        line-height: 0.5rem;
+    }
+    .product-content .item .info p span{
+        font-size: 0.4rem;
+    }
+    .product-content .item .buy{
+        width: 100%;
+        height: 1rem;
+        line-height: 0.5rem;
+    }
+    .product-content .item .buy a{
+        width: 50%;
+        margin: 0.241rem auto 0 auto;
+        font-size: 0.32rem;
+    }
+}
+
+
+/*内容区域尾部***************************************/
+.footer {
+    width: 90%;
+    margin: 0.4rem auto 0 auto;
+    background-color: #fff;
+}
+.footer-content{
+    padding: 0.2rem 0.2rem;
+}
+.footer .footer-brand {
+    width: 24%;
+    float: left;
+    margin: 0;
+    filter: grayscale(100%);
+    box-sizing: border-box;
+}
+
+.footer-content dl {
+    width: 15.2%;
+    float: left;
+    font-family: "微软雅黑", serif;
+    box-sizing: border-box;
+    padding-left: 0.4rem;
+}
+.footer-content dl dt{
+    font-size: 0.32rem;
+    font-weight: 600;
+    color: #777;
+    line-height: 0.42rem;
+}
+.footer-content dl dd{
+    line-height: 0.42rem;
+    font-size: 0.28rem;
+    color: #888;
+ }
+
+/*平板*/
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
+    .footer .footer-brand {
+        display: none;
+    }
+    .footer-content dl {
+        width: 20%;
+        padding-left: 0.2rem;
+    }
+}
+/*手机*/
+@media only screen and (max-width: 30em) {
+    .footer .footer-brand {
+        display: none;
+    }
+
+    .footer-content dl {
+        width: 20%;
+        padding-left: 0.08rem;
+    }
+
+    .footer-content dl dt {
+        font-size: 0.24rem;
+    }
+
+    .footer-content dl dd {
+        font-size: 0.22rem;
+    }
+}
+
+/*底部导航-----------------------------------------------------*/
+footer {
+    width: 100%;
+    padding: 0.6rem 0 1rem;
+    background-color: #ededed;
+}
+footer ul {
+    text-align: center;
+}
+footer ul li {
+    display: inline-block;
+}
+footer ul li .icon {
+    display: inline-block;
+    text-indent: -200rem;
+    margin-right: 0.3rem;
+    background: url("../img/jebmKcbrh.png") no-repeat;
+    background-size:  466px 447px;
+    overflow: hidden;
+}
+footer ul li .icon-zfywxk {
+    width: 38px;
+    height: 27px;
+    background-position: -369px -45px;
+}
+footer ul li .icon-pcirz {
+    width: 78px;
+    height: 27px;
+    background-position: -110px -96px;
+}
+footer ul li .icon-visayz {
+    width: 36px;
+    height: 27px;
+    background-position: -426px -90px;
+}
+footer ul li .icon-vsjmfw {
+    width: 63px;
+    height: 27px;
+    background-position: -401px -186px;
+}
+footer ul li .icon-wlgs {
+    width: 22px;
+    height: 27px;
+    background-position: -48px -48px;
+}
+footer ul li .icon-rzcx {
+    width: 75px;
+    height: 27px;
+    background-position: 0 -320px;
+}
+footer ul li .icon-gs {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    background:url("../img/lybcjqloSPjMAFg.png") no-repeat;
+    background-size: 30px;
+}
+/*版权*/
+footer p {
+    text-align: center;
+    color: #999;
+}
+/*平板*/
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
+    footer {
+        padding: 0.4rem 0 0.6rem 0;
+    }
+}
+/*手机*/
+@media only screen and (max-width: 30em) {
+    footer {
+        padding: 0.2rem 0 0.4rem 0;
+    }
+}
