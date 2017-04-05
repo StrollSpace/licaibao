@@ -5,3 +5,4 @@
 - 兼容主流浏览器，IE8及以下不兼容
 ### 项目展示
 - [理财宝](https://strollspace.github.io/licaibao/src/)
+- [版本说明](https://github.com/StrollSpace/licaibao/blob/gh-pages/CHANGELOG.md)

@@ -379,7 +379,10 @@ header .main ul li a.active {
 /*滚动广告****************************************/
 
 .ad .item{
-
+    display: none;
+}
+.ad .item-active{
+    display: block;
 }
 .ad .item img{
     width: 100%;
