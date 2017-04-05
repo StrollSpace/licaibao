@@ -116,22 +116,25 @@ a:hover, a:active {
 /*网站头部-------------------------------------------*/
 header {
     width: 100%;
+
 }
 /*topBar***********************************/
 header .top {
-    line-height: 0.6rem;
-    padding: 0 0.3rem;
+    margin: 0 auto;
+    height: 0.6rem;
     color: #fff;
+    padding: 0 0.6rem;
     background-color: #555;
-    border-bottom: 1px solid #ecc000;
 }
 header .top .tel {
     float: left;
+    line-height: 0.6rem;
 }
 
 header .top ul {
     text-align: right;
     font-size: 0;
+    box-sizing: content-box;
 }
 header .top ul li {
     display: inline-block;
@@ -144,6 +147,7 @@ header .top ul li a{
     color: #fff;
     display: inline-block;
     padding: 0 0.3rem;
+    line-height: 0.6rem;
 }
 
 @media only screen and (max-width: 50.0625em){
@@ -162,10 +166,12 @@ header .top ul li a{
 /*手机*/
 @media only screen and (max-width: 30em){
     header .top {
-        line-height: 0.4rem;
+        height: 0.44rem;
     }
     header .top ul li a{
-        padding: 0 0.08rem;
+        padding: 0 0.14rem;
+        line-height: 0.4rem;
+
     }
     header .top .tel,
     header .top ul li:nth-child(3),
@@ -177,12 +183,22 @@ header .top ul li a{
 
 
 /*headerNav*********************************/
+header .main{
+
+    background-color: #fff;
+
+}
+header .main-content {
+    margin: 0 auto;
+    width: 90%;
+}
 header .main .brand {
     float: left;
-    padding: 0.15rem 0.28rem;
+    padding: 0.15rem 0;
 }
 header .main ul {
     float: right;
+    font-size: 0;
 }
 header .main ul li {
     display: inline-block;
@@ -190,18 +206,18 @@ header .main ul li {
 }
 header .main ul li a{
     display: inline-block;
-    padding: 0 0.56rem;
+    padding: 0 0.4rem;
     line-height: 1.1rem;
     font-size: 0.32rem;
     font-weight: bold;
-    color: #7c7a65;
+    color: #777;
     text-decoration: none;
 }
 header .main ul li a:hover,
 header .main ul li a:active,
 header .main ul li a.active {
     color: #ffb300;
-    background-color: #f8f6f1;
+    background-color: #fff;
 }
 /*平板*/
 @media only screen and (min-width: 30.0625em) and (max-width: 50em){
@@ -220,11 +236,17 @@ header .main ul li a.active {
         text-align: center;
     }
     header .main ul li a{
-        padding: 0 0.28rem;
+        padding: 0 0.22rem;
+    }
+    header .main ul li {
+        border:none;
     }
 }
 /*手机*/
 @media only screen and (max-width: 30em){
+    header .main-content {
+        width: 100%;
+    }
     header .main .brand {
         float: none;
         display: block;
@@ -234,6 +256,7 @@ header .main ul li a.active {
     }
     header .main .brand img{
         height: 0.48rem;
+        margin-top: 0.12rem;
     }
     header .main ul {
         float: none;
@@ -242,9 +265,12 @@ header .main ul li a.active {
         margin: 0 auto;
         text-align: center;
     }
+    header .main ul li {
+        border:none;
+    }
     header .main ul li a{
-        padding: 0 0.2rem;
-        font-size: 0.2rem;
+        padding: 0 0.08rem;
+        font-size: 0.32rem;
         line-height: 0.68rem;
     }
     header .main ul li:first-child{
@@ -293,7 +319,7 @@ header .main ul li a.active {
     box-shadow: 1px 2px 1px #666 inset;
 }
 .trans-report {
-    padding: 0.2rem 0.16rem;
+    padding: 0.2rem 0.8rem 0.2rem 0;
     text-align: left;
     float: right;
 }
@@ -301,6 +327,7 @@ header .main ul li a.active {
     color: #fff;
     line-height: 0.6rem;
     display: block;
+    font-weight: 600;
 }
 /*平板*/
 @media only screen and (min-width: 30.0625em) and (max-width: 50em){
@@ -335,7 +362,7 @@ header .main ul li a.active {
         display: inline-block;
         line-height: 0.44rem;
         color: #fff;
-        font-size: 0.22rem;
+        font-size: 0.24rem;
     }
     .trans-data span.trans-money {
         font-size: 0.32rem;
@@ -350,9 +377,16 @@ header .main ul li a.active {
 
 
 /*滚动广告****************************************/
-.ad {
-    display: none;
+
+.ad .item{
+
 }
+.ad .item img{
+    width: 100%;
+    vertical-align: top;
+}
+
+
 
 /*平台特点*****************************************/
 .feature {
@@ -420,8 +454,9 @@ header .main ul li a.active {
         line-height: 0.4rem;
     }
     .feature .item {
+        box-sizing: border-box;
+        width:100%;
         display: block;
-        width: calc(90% + 0.3rem);
         font-size: 0.28rem;
         background-color: #fff;
         box-shadow: 0 0 4px #ccc;
@@ -524,6 +559,7 @@ header .main ul li a.active {
     background-color: #e6f0f9;
     font-size: 0.52rem;
     height: calc(1.56rem *5 + 0.02rem *5);
+    color: #777;
 }
 .product h2 em {
     display: block;
@@ -545,7 +581,7 @@ header .main ul li a.active {
     font-size: 0.24rem;
     box-sizing: border-box;
     position: relative;
-    color: #333;
+    color: #777;
 }
 .product .product-content .item h3 > p {
     width: 100%;
@@ -559,7 +595,7 @@ header .main ul li a.active {
 }
 .product-content .item em {
     font-style: normal;
-    color: #666;
+    color: #555;
     font-size: 0.64rem;
     font-weight: 400;
 }
@@ -598,11 +634,12 @@ header .main ul li a.active {
     width: 80%;
     text-align: center;
     display: block;
-    font-size: 0.36rem;
+    font-size: 0.32rem;
     background-color: #ffb300;
     text-decoration: none;
     color: #fff;
     margin: 0.39rem auto 0 auto;
+    border-radius: 0.12rem;
 }
 /*禁止购买*/
 .products .product-content .item:last-child a,
@@ -631,14 +668,14 @@ header .main ul li a.active {
         font-size: 0.2rem;
     }
     .product-content .item em {
-        font-size: 0.56rem;
+        font-size: 0.52rem;
     }
 
     .product-content .item .info p + p {
-        padding-left: 14%;
+        padding-left: 10%;
     }
     .product-content .item .info p{
-        font-size: 0.24rem;
+        font-size: 0.28rem;
     }
     .product-content .item .info p span{
         font-size: 0.52rem;
@@ -676,6 +713,7 @@ header .main ul li a.active {
 
     .product .product-content .item h3 > p {
         bottom: 0;
+        font-size: 0.2rem;
     }
     .product-content .item em {
         font-size: 0.4rem;
@@ -685,10 +723,10 @@ header .main ul li a.active {
         line-height: 1rem;
     }
     .product-content .item .info p + p {
-        padding-left: 6%;
+        padding-left: 2%;
     }
     .product-content .item .info p{
-        font-size: 0.2rem;
+        font-size: 0.26rem;
         line-height: 0.5rem;
     }
     .product-content .item .info p span{
@@ -752,6 +790,12 @@ header .main ul li a.active {
         width: 20%;
         padding-left: 0.2rem;
     }
+    .footer-content dl dt{
+        font-size: 0.28rem;
+    }
+    .footer-content dl dd{
+        font-size: 0.24rem;
+    }
 }
 /*手机*/
 @media only screen and (max-width: 30em) {
@@ -781,6 +825,7 @@ footer {
 }
 footer ul {
     text-align: center;
+    padding: 0 0.4rem;
 }
 footer ul li {
     display: inline-block;
@@ -845,5 +890,63 @@ footer p {
 @media only screen and (max-width: 30em) {
     footer {
         padding: 0.2rem 0 0.4rem 0;
+    }
+}
+
+
+
+/*
+    =========
+    打印样式
+    =========
+*/
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000; !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: "("attr(href)")";
+    }
+    a[title]:after {
+        content: "("attr(title)")";
+    }
+
+    /**
+     * 使用#和javascript的超链接不打印href
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after{
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-column-group;
+    }
+    img {
+        max-width: 100%; !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        window: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
     }
 }
